@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diskarpus Depok</title>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #backButton {
+        position: fixed;
+        bottom: 40px;
+        right: 100px;
+        background-color: #151f62;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      #backButton:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="img/depok.png" />
+      <a href="#" class="navbar-logo"
+        >DINAS KEARSIPAN DAN PERPUSTAKAAN <span><br />WALIKOTA DEPOK</span></a
+      >
+    </nav>
+
+    <div class="card-container" id="cardContainer">
+      <div class="card">
+        <a href="aula_lt1p.php">
+          <img src="img/rp_uala.jpeg" alt="Ruang Aula" />
+          <div class="room-name">Ruang Aula</div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="bermain_lt1p.php"
+          ><img src="img/rp_bermain.jpeg" alt="Tempat Bermain Anak" />
+          <div class="room-name">Tempat Bermain Anak</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="server_lt1p.php"
+          ><img src="img/rp_server.jpeg" alt="Ruang Server" />
+          <div class="room-name">Ruang Server</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="pembudayaan_lt1p.php"
+          ><img src="img/rp_pembudayaan.jpeg" alt="Ruang Pembudayaan" />
+          <div class="room-name">Ruang Pembudayaan</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="toiletl_lt1p.php"
+          ><img src="img/rp_toiletp1.jpeg" alt="Toilet Pria" />
+          <div class="room-name">Toilet Pria</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="toiletw_lt1p.php"
+          ><img src="img/rp_toiletw1.jpeg" alt="Toilet Wanita" />
+          <div class="room-name">Toilet Wanita</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="toiletvp_lt1p.php"
+          ><img src="img/rp_vip.jpeg" alt="Toilet VIP" />
+          <div class="room-name">Toilet VIP</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="wudhu_lt1p.php"
+          ><img src="img/rp_wudhu.jpeg" alt="Tempat Wudhu" />
+          <div class="room-name">Tempat Wudhu</div></a
+        >
+      </div>
+    </div>
+
+    <button class="arrow left" onclick="scrollCards(-1)">&#10094;</button>
+    <button class="arrow right" onclick="scrollCards(1)">&#10095;</button>
+
+    <a id="backButton" href="perpus.html">Kembali</a>
+
+    <script>
+      function scrollCards(direction) {
+        const container = document.getElementById("cardContainer");
+        const scrollAmount = 300;
+        container.scrollBy({
+          left: direction * scrollAmount,
+          behavior: "smooth",
+        });
+      }
+
+      feather.replace();
+    </script>
+  </body>
+</html>

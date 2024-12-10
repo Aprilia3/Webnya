@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diskarpus Depok</title>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #backButton {
+        position: fixed;
+        bottom: 40px;
+        right: 100px;
+        background-color: #151f62;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      #backButton:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="img/depok.png" />
+      <a href="#" class="navbar-logo"
+        >DINAS KEARSIPAN DAN PERPUSTAKAAN <span><br />WALIKOTA DEPOK</span></a
+      >
+    </nav>
+
+    <div class="card-container" id="cardContainer">
+      <div class="card">
+        <a href="pustakawan_lt3p.php">
+          <img src="img/rp_pustakawan.jpeg" alt="Ruang Pustakawan" />
+          <div class="room-name">Ruang Pustakawan</div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="klayanan_lt3p.php"
+          ><img src="img/rp_klayanan.jpeg" alt="Ruang Kepala Seksi Layanan" />
+          <div class="room-name">Ruangan Kepala Seksi Layanan</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="rapat_lt3p.php"
+          ><img src="img/rp_rapat.jpeg" alt="Ruang Rapat" />
+          <div class="room-name">Ruang Rapat</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="sekdis_lt3p.php"
+          ><img src="img/rp_sekdis.jpeg" alt="Ruang Sekdis" />
+          <div class="room-name">Ruang Sekretaris Dinas</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="kasubag_lt3p.php"
+          ><img src="img/rp_umum.jpeg" alt="Ruang Kasubag Umum" />
+          <div class="room-name">Ruang Kasubag Umum</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="records_lt3p.php"
+          ><img src="img/rp_record.jpeg" alt="Dinas Kearsipan Records Center" />
+          <div class="room-name">Dinas Kearsipan Records Center</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="teater_lt3p.php"
+          ><img src="img/rp_teater.jpeg" alt="Ruang Teater" />
+          <div class="room-name">Ruang Teater</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="perencana_lt3p.php"
+          ><img src="img/Depok.png" alt="Ruang Kasubag Perencana Evaluasi" />
+          <div class="room-name">Ruang Kasubag Perencana Evaluasi</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="keuangan_lt3p.php"
+          ><img
+            src="img/rp_keuangan.jpeg"
+            alt="Ruang Kasubag Keuangan dan Aset"
+          />
+          <div class="room-name">Ruang Kasubag Keuangan dan Aset</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="tamu_lt3p.php"
+          ><img src="img/rp_tamu.jpeg" alt="Ruang Tamu" />
+          <div class="room-name">Ruang Tamu</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="kbidang_lt3p.php"
+          ><img src="img/rp_kperpus.jpeg" alt="Kepala Bidang Perpustakaan" />
+          <div class="room-name">Kepala Bidang Perpustakaan</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="kdeposit_lt3p.php"
+          ><img src="img/rp_deposit.jpeg" alt="Kepala Seksi Deposit" />
+          <div class="room-name">Kepala Seksi Deposit</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="sekretariat_lt3p.php"
+          ><img src="img/rp_sekretariat.jpeg" alt="Ruang Sekretariat " />
+          <div class="room-name">Ruang Sekretariat Perpustakaan</div></a
+        >
+      </div>
+    </div>
+
+    <button class="arrow left" onclick="scrollCards(-1)">&#10094;</button>
+    <button class="arrow right" onclick="scrollCards(1)">&#10095;</button>
+
+    <a id="backButton" href="perpus.html">Kembali</a>
+
+    <script>
+      function scrollCards(direction) {
+        const container = document.getElementById("cardContainer");
+        const scrollAmount = 300;
+        container.scrollBy({
+          left: direction * scrollAmount,
+          behavior: "smooth",
+        });
+      }
+
+      feather.replace();
+    </script>
+  </body>
+</html>

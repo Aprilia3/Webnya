@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diskarpus Depok</title>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #backButton {
+        position: fixed;
+        bottom: 40px;
+        right: 100px;
+        background-color: #151f62;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      #backButton:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="img/depok.png" />
+      <a href="#" class="navbar-logo"
+        >DINAS KEARSIPAN DAN PERPUSTAKAAN <span><br />WALIKOTA DEPOK</span></a
+      >
+    </nav>
+
+    <div class="card-container" id="cardContainer">
+      <div class="card">
+        <a href="bidang_lt1a.php">
+          <img src="img/ra_bidang.jpeg" alt="Ruang Bidang Arah Arsip" />
+          <div class="room-name">Ruang Bidang Arah Arsip</div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="kseksi_lt1a.php"
+          ><img src="img/ra_kseksi.jpeg" alt="Ruang Kepala Seksi" />
+          <div class="room-name">Ruang Kepala Seksi</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="arsip_lt1a.php"
+          ><img src="img/ra_arsip.jpeg" alt="Ruang Arsip Aris" />
+          <div class="room-name">Ruang Arsip Aris</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="kbidang_lt1a.php"
+          ><img src="img/ra_kbidang.jpeg" alt="Ruang Arsip Aris" />
+          <div class="room-name">Ruang Kepala Bidang Arsip</div></a
+        >
+      </div>
+      <div class="card">
+        <a href="toiletw_lt1a.php"
+          ><img src="img/ra_toiletw.jpeg" alt="Kamar Mandi Wanita" />
+          <div class="room-name">Kamar Mandi Wanita</div></a
+        >
+      </div>
+    </div>
+
+    <button class="arrow left" onclick="scrollCards(-1)">&#10094;</button>
+    <button class="arrow right" onclick="scrollCards(1)">&#10095;</button>
+
+    <a id="backButton" href="arsip.html">Kembali</a>
+
+    <script>
+      function scrollCards(direction) {
+        const container = document.getElementById("cardContainer");
+        const scrollAmount = 300;
+        container.scrollBy({
+          left: direction * scrollAmount,
+          behavior: "smooth",
+        });
+      }
+
+      feather.replace();
+    </script>
+  </body>
+</html>

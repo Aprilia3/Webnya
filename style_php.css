@@ -1,0 +1,75 @@
+:root {
+  --primary: #151f62;
+  --bg: #eeeeee;
+  --grey: #787a91;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  padding: 1.4rem 5%;
+  background: var(--primary);
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.navbar img {
+  width: 100px;
+  padding-left: -50px;
+  margin-top: 5px;
+}
+
+.navbar .navbar-logo {
+  color: var(--bg);
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0px 54% 0px 0px;
+  text-decoration: none;
+}
+
+.navbar .navbar-logo span {
+  color: #fffb00;
+}
+
+#backButton {
+  position: fixed;
+  bottom: 60px; /* Geser sedikit ke atas */
+  right: 30px; /* Geser sedikit ke kiri */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none; /* Menghapus garis bawah dari tautan */
+}
+#backButton:hover {
+  background-color: #0056b3;
+}
+/* Tambahkan margin di bawah tabel dan tombol */
+.table-container {
+  margin-bottom: 50px; /* Ruang di bawah tabel */
+}
